@@ -9,12 +9,14 @@ import lombok.Getter;
 @Builder(access = AccessLevel.PRIVATE)
 public class Member {
 
+    private String id;
     private String name;
     private String birthYear;
     private String password;
 
-    public static Member create(final String name, final String birthYear, final String password) {
+    public static Member create(final String id, final String name, final String birthYear, final String password) {
         return Member.builder()
+                .id(id)
                 .name(name)
                 .birthYear(birthYear)
                 .password(password)

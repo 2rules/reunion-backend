@@ -12,6 +12,7 @@ public class MemberMapper {
 
     public Member toMember(SignUpRequest request) {
         return Member.create(
+                request.getId(),
                 request.getName(),
                 request.getBirthYear(),
                 request.getPassword()

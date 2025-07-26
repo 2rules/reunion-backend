@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class MemberEntityMapper {
 
     public MemberEntity toEntity(Member member) {
-        return MemberEntity.of(member.getName(), member.getBirthYear());
+        return MemberEntity.from(member);
     }
 
 
